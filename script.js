@@ -11,6 +11,7 @@ const PRODUCTS = {
   'promo-tricho-humicos': {name:'Promoción TRICHO + ácidos húmicos', line:'promo', image:'assets/promo-tricho-humicos-borde-corregido.webp?v=5.8.8', unit:40, unitLabel:'combo', sizeLabel:'2 litros de TRICHO + 1 kg de ácidos húmicos de regalo', freeShipping:true},
   'acidos-humicos-1kg': {name:'Ácidos Húmicos 50 %', line:'humicos', image:'assets/acidos-humicos-empaque.webp?v=5.8.0', unit:12, unitLabel:'paquete', sizeLabel:'1 kg'},
   'acidos-fulvicos-1kg': {name:'Ácidos Fúlvicos 60 %', line:'fulvicos', image:'assets/acidos-fulvicos-etiqueta-tecnica-1kg.webp?v=5.8.4', unit:20, unitLabel:'paquete', sizeLabel:'1 kg'},
+  'nodum-250g': {name:'GALYON NODUM · Bioestimulante de algas marinas', line:'nodum', image:'assets/nodum-250g-empaque-aprobado.webp', unit:12, unitLabel:'paquete', sizeLabel:'250 g'},
   'tricho-sustrato-1kg': {name:'GALYON TRICHO en sustrato', line:'tricho', image:'assets/tricho-sustrato.webp', unit:25, unitLabel:'paquete', sizeLabel:'1 kg'},
   'combo-cacao': {freeShipping:true, name:'Cacao Vital · 2 L TRICHO + 2 L BACT', line:'combo', image:'assets/linea-tricho.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},
   'combo-mango': {freeShipping:true, name:'Mango Selecto · 2 L BACT + 2 L INSECTA', line:'combo', image:'assets/linea-bact.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},

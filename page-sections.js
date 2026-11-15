@@ -8,7 +8,7 @@
  const panels=[...document.querySelectorAll('[data-site-panel]')];
  if(!header||!select||!jump||!panels.length)return;
  const names={inicio:'Inicio',nosotros:'Nosotros',asesor:'Asesor',combos:'Combos',lineas:'Productos',suelo:'Suelo',garantia:'Acompañamiento'};
- const aliases={'productos':'lineas','tricho-sustrato':'lineas','humicos':'suelo','fulvicos':'suelo','soluciones-suelo':'suelo','materia-organica':'suelo','analisis':'suelo','acompanamiento':'garantia'};
+ const aliases={'productos':'lineas','tricho-sustrato':'lineas','humicos':'suelo','fulvicos':'suelo','nodum':'suelo','soluciones-suelo':'suelo','materia-organica':'suelo','analisis':'suelo','acompanamiento':'garantia'};
  const links=[...header.querySelectorAll('.navlinks a[href^="#"]')];
  let current='inicio';
  function hashId(){try{return decodeURIComponent(location.hash.slice(1));}catch{return '';}}

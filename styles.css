@@ -1823,6 +1823,11 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .soil-product-consult{font-size:13px;line-height:1.5;font-weight:700;color:var(--forest)}
 .soil-product-copy .soil-availability{font-size:13px;color:#658151;margin-top:auto;margin-bottom:18px}
 .soil-product-enquiry{white-space:normal;line-height:1.5;max-width:100%}
+.soil-product-card-nodum{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.soil-product-card-nodum .soil-product-photo{border-bottom:0;border-right:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.soil-product-card-nodum .soil-product-photo img{height:500px;max-height:100%;object-fit:contain}
+.soil-product-card-nodum .soil-product-enquiry{margin-top:auto;text-align:center;text-decoration:none}
+@media(max-width:600px){.soil-product-card-nodum{grid-template-columns:minmax(0,1fr)}.soil-product-card-nodum .soil-product-photo{border-right:0;border-bottom:1px solid var(--line)}.soil-product-card-nodum .soil-product-photo img{height:390px}.soil-product-card-nodum .soil-product-facts dd{white-space:normal;text-align:right}}
 .soil-technical-note{font-size:12px;line-height:1.7;color:#7b897d;margin:25px 0 0;max-width:850px}
 .soil-organic{background:#f3f7ef;padding-block:65px}
 .soil-organic-heading{max-width:700px}

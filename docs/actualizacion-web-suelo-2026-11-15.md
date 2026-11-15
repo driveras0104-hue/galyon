@@ -48,7 +48,7 @@ La fotografía original de cada línea en el catálogo conserva su proporción c
 sin recortar tapa ni base. Un rótulo persistente y botones Ver presentaciones hacen
 visible el área de apertura en móvil; el enlace existente cubre también la foto.
 
-Se publican $12 por 1 kg de húmicos y $20 por 1 kg de fúlvicos, por autorización del usuario. NODUM a $12 por 250 g continúa como propuesta. Los aminoácidos se registran como futura línea,
+Se publican $12 por 1 kg de húmicos y $20 por 1 kg de fúlvicos, por autorización del usuario. NODUM se publica a $12 por 250 g tras la confirmación expresa del usuario. Los aminoácidos se registran como futura línea,
 pendiente de ficha técnica y costos.
 
 ## Etiqueta técnica de fúlvicos y disponibilidad confirmada
@@ -115,3 +115,7 @@ clara y adaptable. Se conservan las condiciones comerciales y una consulta
 discreta. Se retira el bloque de consulta común que repetía una foto y WhatsApp
 al pie de todas las áreas. Las fotografías de Nosotros no se sustituyen: se
 preparan propuestas con imágenes reales para revisión del fundador.
+
+## Incorporación de NODUM a Suelo
+
+NODUM se incorpora después de los húmicos y fúlvicos, antes de los planes de análisis. Usa el empaque aprobado de 250 g sin regenerar ni modificar la etiqueta. El usuario confirmó $12 por paquete; el SKU `nodum-250g` permite añadirlo al carrito, conserva cantidades y aplica el envío estándar de productos individuales. El enlace `#nodum` abre Suelo directamente. Materia orgánica permanece al final.
