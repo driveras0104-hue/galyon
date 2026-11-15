@@ -69,3 +69,11 @@ Asesor y Acompañamiento. El selector móvil y los accesos de Inicio mantienen
 el mismo orden. Suelo comienza directamente con húmicos y fúlvicos: se retiran
 la portada, la imagen introductoria y el texto de presentación. Se conserva
 solo un título breve y accesos a análisis y materia orgánica.
+
+## Historia de GALYON y asesoría fuera de la fotografía
+
+Nosotros incorpora el texto personal aprobado por el fundador, con el título
+«Una pasión que encontró su lugar en el campo.» y una nota discreta dedicada
+a Violeta. La historia se muestra abierta inicialmente también en móvil.
+El acceso a asesoría sale de la primera fotografía y pasa debajo de la secuencia,
+como botón compacto «Quiero asesoría a distancia» enlazado a WhatsApp.

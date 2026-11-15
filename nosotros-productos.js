@@ -3,7 +3,7 @@
 (()=>{
  const mobile=window.matchMedia('(max-width: 760px)');
  const about=document.querySelector('.intro-secondary');
- function syncAbout(){if(about)about.open=!mobile.matches;}
+ function syncAbout(){if(about&&!mobile.matches)about.open=true;}
  syncAbout();mobile.addEventListener('change',syncAbout);
  const gallery=document.querySelector('.identity-gallery-steps');
  if(!gallery)return;
