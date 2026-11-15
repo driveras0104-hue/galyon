@@ -31,7 +31,7 @@
   links.forEach(link=>{if(link.hash==='#'+view)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
   select.value=view;
   closeMenu();height();
-  if(modal)return;
+  if(modal){target?.classList.remove('is-dismissed');return;}
   if(scroll)requestAnimationFrame(()=>{
    const panel=panels.find(p=>p.dataset.sitePanel===view);
    const anchor=target&&!target.hidden&&target!==panel?target:null;

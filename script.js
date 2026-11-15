@@ -8,7 +8,7 @@ const PRODUCTS = {
   'insecta-bt': {name:'GALYON INSECTA · Bacillus thuringiensis', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'insecta-beauveria': {name:'GALYON INSECTA · Beauveria bassiana', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'insecta-metarhizium': {name:'GALYON INSECTA · Metarhizium anisopliae', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
-  'promo-tricho-humicos': {name:'Promoción TRICHO + ácidos húmicos', line:'promo', image:'assets/promo-tricho-humicos-sin-halo.webp?v=5.8.7', unit:40, unitLabel:'combo', sizeLabel:'2 litros de TRICHO + 1 kg de ácidos húmicos de regalo', freeShipping:true},
+  'promo-tricho-humicos': {name:'Promoción TRICHO + ácidos húmicos', line:'promo', image:'assets/promo-tricho-humicos-borde-corregido.webp?v=5.8.8', unit:40, unitLabel:'combo', sizeLabel:'2 litros de TRICHO + 1 kg de ácidos húmicos de regalo', freeShipping:true},
   'acidos-humicos-1kg': {name:'Ácidos Húmicos 50 %', line:'humicos', image:'assets/acidos-humicos-empaque.webp?v=5.8.0', unit:12, unitLabel:'paquete', sizeLabel:'1 kg'},
   'acidos-fulvicos-1kg': {name:'Ácidos Fúlvicos 60 %', line:'fulvicos', image:'assets/acidos-fulvicos-etiqueta-tecnica-1kg.webp?v=5.8.4', unit:20, unitLabel:'paquete', sizeLabel:'1 kg'},
   'tricho-sustrato-1kg': {name:'GALYON TRICHO en sustrato', line:'tricho', image:'assets/tricho-sustrato.webp', unit:25, unitLabel:'paquete', sizeLabel:'1 kg'},

@@ -87,7 +87,7 @@ imagen ilustrativa de compost. No se añaden productos orgánicos ni precios sin
 confirmación de proveedor y disponibilidad.
 
 La promoción conserva la composición original y el nuevo empaque. Se corrigen
-4.105 píxeles del halo del recorte; el interior de la etiqueta, las botellas y
+12.443 píxeles del contorno completo; el interior de la etiqueta, las botellas y
 los textos permanecen intactos. La URL de la imagen cambia para evitar caché.
 
 El cierre común incorpora la fotografía real IMG_3181.JPG de una visita del
@@ -99,3 +99,19 @@ Por solicitud posterior, la dedicatoria de Violeta se retira del texto principal
 Queda al final del footer, desplegable bajo «Una promesa.», únicamente al ver
 Nosotros. En las demás áreas se oculta también de las tecnologías de asistencia
 mediante display:none.
+
+## Recarga y contorno definitivo
+
+Al refrescar, el sitio abre Nosotros desde arriba, conserva el carrito guardado
+y cierra fichas, menú y visores transitorios. Las entradas nuevas con ancla
+y la navegación de atrás/adelante se conservan. La promoción tiene un archivo
+con nombre nuevo que elimina la banda blanca continua del recorte, incluida
+la fila clara que quedó en el primer retoque. Etiqueta y botellas intactas.
+
+## Acompañamiento integrado y menos consultas repetidas
+
+Acompañamiento reúne compromisos y preguntas frecuentes en una sola sección
+clara y adaptable. Se conservan las condiciones comerciales y una consulta
+discreta. Se retira el bloque de consulta común que repetía una foto y WhatsApp
+al pie de todas las áreas. Las fotografías de Nosotros no se sustituyen: se
+preparan propuestas con imágenes reales para revisión del fundador.
