@@ -1809,7 +1809,7 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .soil-product-card{overflow:hidden;min-width:0;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;background:#fff;scroll-margin-top:calc(var(--galyon-header-height,90px) + 20px)}
 .soil-product-photo{position:relative;background:#fff;border-bottom:1px solid var(--line);padding:24px}
 .soil-product-photo img{width:100%;height:420px;object-fit:contain;display:block}
-.soil-coming-soon{position:absolute;top:20px;left:20px;padding:8px 10px;z-index:1;border-radius:4px;background:#eaf3e5;color:var(--forest);font-size:10px;font-weight:800;letter-spacing:.08em}
+.soil-availability-badge{position:absolute;top:20px;left:20px;padding:8px 10px;z-index:1;border-radius:4px;background:#eaf3e5;color:var(--forest);font-size:10px;font-weight:800;letter-spacing:.08em}
 .soil-product-copy{padding:30px;display:flex;align-items:flex-start;flex-direction:column;flex:1}
 .soil-product-kicker{font-size:10px!important;letter-spacing:.11em;font-weight:700;color:#658151!important;margin:0 0 13px!important}
 .soil-product-copy h3{font-family:'Manrope','DM Sans',Arial,sans-serif;font-size:30px;line-height:1.2;letter-spacing:-.04em;margin:0 0 18px;color:var(--forest)}
@@ -1888,3 +1888,8 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 #lineas .product-card .product-visual .line-photo{height:auto!important;max-height:none;aspect-ratio:auto!important;object-fit:contain!important;transform:none!important}
 #detalle-tricho .tricho-gallery-slides .tricho-gallery-slide{object-fit:contain!important;object-position:center!important;background:#f4f7f0}
 @media(max-width:600px){#asesor{padding-top:30px}#asesor .advisor-shell{gap:20px}#asesor .advisor-start>p{font-size:14px}}
+
+/* Las especificaciones de la etiqueta se pueden revisar a tamaño completo. */
+.soil-label-preview{display:block;color:var(--forest);text-align:center}
+.soil-label-preview>span{display:block;font-size:12px;font-weight:700;padding-top:12px;line-height:1.5}
+.soil-label-preview:hover>span{text-decoration:underline;text-underline-offset:3px}

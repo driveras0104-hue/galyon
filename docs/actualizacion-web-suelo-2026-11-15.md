@@ -9,8 +9,7 @@ El inicio conserva la portada y accesos a cada área. Las anclas anteriores
 El logo devuelve al inicio. Sin JavaScript, el contenido y sus anclas se conservan.
 
 Suelo reúne húmicos, fúlvicos, información de materia orgánica y los análisis
-existentes. Los fúlvicos se anuncian como próximamente: no tienen SKU de compra,
-precio ni compra anticipada. El usuario confirmó posteriormente el contenido neto de 1 kg. Los húmicos conservan el SKU de 1 kg y $15.
+existentes. El usuario confirmó la disponibilidad de los fúlvicos: se habilita el SKU de 1 kg a $20. Los húmicos bajan de $15 a $12 por 1 kg tras revisar costos y referencias comerciales.
 
 ## Fotografías y empaques
 
@@ -49,6 +48,16 @@ La fotografía original de cada línea en el catálogo conserva su proporción c
 sin recortar tapa ni base. Un rótulo persistente y botones Ver presentaciones hacen
 visible el área de apertura en móvil; el enlace existente cubre también la foto.
 
-Los precios recomendados en la evaluación privada son propuestas, no una modificación
-automática de los precios publicados. Los aminoácidos se registran como futura línea,
+Se publican $12 por 1 kg de húmicos y $20 por 1 kg de fúlvicos, por autorización del usuario. NODUM a $12 por 250 g continúa como propuesta. Los aminoácidos se registran como futura línea,
 pendiente de ficha técnica y costos.
+
+## Etiqueta técnica de fúlvicos y disponibilidad confirmada
+
+La etiqueta incluye los seis datos de la ficha: fúlvico 60 %, K₂O 8–10 %, pH 5–7,
+hidrosolubilidad 99,5 %, densidad 525 g/L y humedad <5 %. También incluye aspecto
+café/amarillo, carácter higroscópico, conservación y contenido neto de 1 kg.
+La imagen de etiqueta tiene una URL propia y puede ampliarse desde la tarjeta.
+Las etiquetas de ambos productos son accesibles a tamaño completo desde Suelo.
+
+La promoción conserva $40 por 2 L de TRICHO + 1 kg de húmicos de regalo y envío
+gratis. Su imagen usa el empaque nuevo y una URL diferenciada para evitar caché.

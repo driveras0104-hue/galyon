@@ -1,0 +1,17 @@
+{
+  "producto": "GALYON Ácidos Fúlvicos 60 %",
+  "contenido_neto": "1 kg",
+  "especificaciones": {
+    "Ácido fúlvico": "60 %",
+    "Potasio (K₂O)": "8–10 %",
+    "pH": "5–7",
+    "Hidrosolubilidad": "99,5 %",
+    "Densidad": "525 g/L",
+    "Humedad": "<5 %"
+  },
+  "aspecto": "Polvo de color café / amarillo",
+  "conservacion": "Conservar bien cerrado, en un lugar fresco y seco. Proteger de la humedad: producto muy higroscópico.",
+  "fuente": "Ficha de Ácido Fúlvico 60 % proporcionada por el usuario el 15 de noviembre de 2026.",
+  "nota_densidad": "La ficha expresa 525 gr/lt; se normaliza a 525 g/L sin añadir una condición de ensayo ni la calificación aparente.",
+  "nota_ph": "La ficha de fúlvicos no indica solución al 1 %. No se copia esa condición desde la ficha de húmicos."
+}
