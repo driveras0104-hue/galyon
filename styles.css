@@ -1764,3 +1764,102 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .drawer-footer .total-line{border-top:1px solid #dfe8d9;padding-top:12px;margin-top:12px}
 .cart-item-main{min-width:0}.cart-item-main strong{overflow-wrap:anywhere}.cart-item-price{margin-top:9px;font-size:16px;color:#173e2b}
 @media(max-width:540px){.catalog-add{width:100%;margin-right:0}.formulation-price b{font-size:20px}.weekly-offer-price strong,.humic-price strong{font-size:32px}}
+
+/* v5.8 · Áreas independientes y fotografías de producto con texto real. */
+[data-site-panel][hidden]{display:none!important}
+.has-section-views main>[data-site-panel]:not(.hero){scroll-margin-top:var(--galyon-header-height,90px)}
+.has-section-views .navlinks a[aria-current="page"]{color:var(--forest);text-decoration:underline;text-decoration-color:#8eb36d;text-underline-offset:8px;text-decoration-thickness:2px}
+.home-pathways{background:#fff}
+.home-pathway-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.home-pathway-grid>a{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:30px;border:1px solid var(--line);border-radius:12px;background:#f6f8f3;transition:border-color .2s,transform .2s}
+.home-pathway-grid>a:hover{border-color:#8cac74;transform:translateY(-3px)}
+.home-pathway-grid small{font-size:10px;letter-spacing:.12em;font-weight:700;color:#667a60}
+.home-pathway-grid h3{font-size:24px;line-height:1.2;letter-spacing:-.035em;margin:20px 0 12px;color:var(--forest)}
+.home-pathway-grid p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 25px}
+.home-pathway-grid>a>span{margin-top:auto;font-size:12px;font-weight:700;color:var(--forest)}
+#nosotros .galyon-showcase .identity-photo-solution::before{display:none}
+#nosotros .identity-product-slides{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr)}
+#nosotros .identity-sequence-slide.identity-product-slide{position:relative;inset:auto;grid-area:1/1;display:flex;flex-direction:column;height:auto;min-width:0;background:#fff}
+#nosotros .identity-product-copy{flex:1;padding:18px 16px 17px;background:#fff;min-width:0;color:var(--forest)}
+#nosotros .identity-product-name{margin:0 0 9px;font-size:8px;line-height:1.3;font-weight:700;letter-spacing:.08em}
+#nosotros .identity-product-copy h3{font-family:'Manrope','DM Sans',Arial,sans-serif;margin:0;font-size:clamp(16px,1.65vw,22px);line-height:1.13;letter-spacing:-.035em;font-weight:700;color:var(--forest)}
+#nosotros .identity-product-benefit{margin:11px 0 0;font-size:8px;line-height:1.5;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#52705a}
+#nosotros .identity-product-slide>img{position:static;display:block;flex:none;width:100%;height:auto;aspect-ratio:900/880;object-fit:cover}
+#nosotros .identity-photo-solution::after{display:none}
+#nosotros .identity-photo-solution figcaption{position:relative;inset:auto;padding:10px 12px;background:var(--forest);pointer-events:none;text-shadow:none;line-height:1.4}
+
+/* Suelo: productos, materia orgánica y diagnóstico en una misma área. */
+.soil-chapter{background:#fff}
+.soil-overview{padding-bottom:58px;background:#f1f6ed}
+.soil-overview-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}
+.soil-overview h1{font-family:'Manrope','DM Sans',Arial,sans-serif;font-size:clamp(38px,4.2vw,60px);line-height:1.12;letter-spacing:-.055em;margin:20px 0 24px;color:var(--forest);font-weight:700}
+.soil-overview h1 em{font-style:normal;color:#62824e}
+.soil-overview p{font-size:17px;line-height:1.8;color:#526c59;max-width:520px}
+.soil-overview img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:14px}
+.soil-local-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.soil-local-nav a{padding:11px 14px;border:1px solid #c8d8bf;border-radius:5px;font-size:12px;font-weight:700;color:var(--forest);background:#fff}
+.soil-local-nav a:hover{background:#e5efd9}
+.soil-products{padding-bottom:55px}
+.soil-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.soil-product-card{overflow:hidden;min-width:0;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;background:#fff;scroll-margin-top:calc(var(--galyon-header-height,90px) + 20px)}
+.soil-product-photo{position:relative;background:#fff;border-bottom:1px solid var(--line);padding:24px}
+.soil-product-photo img{width:100%;height:420px;object-fit:contain;display:block}
+.soil-coming-soon{position:absolute;top:20px;left:20px;padding:8px 10px;z-index:1;border-radius:4px;background:#eaf3e5;color:var(--forest);font-size:10px;font-weight:800;letter-spacing:.08em}
+.soil-product-copy{padding:30px;display:flex;align-items:flex-start;flex-direction:column;flex:1}
+.soil-product-kicker{font-size:10px!important;letter-spacing:.11em;font-weight:700;color:#658151!important;margin:0 0 13px!important}
+.soil-product-copy h3{font-family:'Manrope','DM Sans',Arial,sans-serif;font-size:30px;line-height:1.2;letter-spacing:-.04em;margin:0 0 18px;color:var(--forest)}
+.soil-product-copy h3 span{white-space:nowrap;color:#739058}
+.soil-product-copy>p{font-size:15px;line-height:1.8;color:#586e5e;margin:0 0 24px}
+.soil-product-facts{align-self:stretch;margin:0 0 25px;border-top:1px solid var(--line)}
+.soil-product-facts>div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.4}
+.soil-product-facts dt{color:#5d7160}.soil-product-facts dd{margin:0;color:var(--forest);font-weight:700;white-space:nowrap}
+.soil-product-copy .soil-product-price{margin-top:auto;margin-bottom:15px}
+.soil-product-price strong{font-size:30px;font-weight:800;color:var(--forest)}
+.soil-product-price span{font-size:13px;color:var(--muted)}
+.soil-product-copy .catalog-add{margin:0 0 15px}
+.soil-product-consult{font-size:13px;line-height:1.5;font-weight:700;color:var(--forest)}
+.soil-product-copy .soil-availability{font-size:13px;color:#658151;margin-top:auto;margin-bottom:18px}
+.soil-product-enquiry{white-space:normal;line-height:1.5;max-width:100%}
+.soil-technical-note{font-size:12px;line-height:1.7;color:#7b897d;margin:25px 0 0;max-width:850px}
+.soil-organic{background:#f3f7ef;padding-block:65px}
+.soil-organic-heading{max-width:700px}
+.soil-organic h2{font-family:'Manrope','DM Sans',Arial,sans-serif;font-size:clamp(32px,3.4vw,46px);line-height:1.15;letter-spacing:-.045em;margin:15px 0 20px;color:var(--forest)}
+.soil-organic h2 span{color:#708d5b}
+.soil-organic p{font-size:15px;line-height:1.85;color:#58705b}
+.soil-organic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin:35px 0 25px}
+.soil-organic-grid article{border-top:1px solid #bbcfac;padding-top:22px}
+.soil-organic-grid h3{font-size:19px;line-height:1.35;margin:0 0 14px;color:var(--forest)}
+.soil-organic-grid p{font-size:14px;margin:0}
+@media(max-width:960px){
+ #nosotros .galyon-showcase .identity-gallery-steps{grid-auto-rows:1fr}
+ #nosotros .identity-product-copy h3{font-size:clamp(20px,3.1vw,29px)}
+ #nosotros .identity-product-name{font-size:10px}
+ #nosotros .identity-product-benefit{font-size:10px}
+ .soil-overview-grid{gap:30px}
+ .home-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .soil-product-copy{padding:23px}
+ .soil-product-copy h3{font-size:25px}
+}
+@media(max-width:600px){
+ #nosotros .identity-product-copy{padding:14px 12px 15px}
+ #nosotros .identity-product-copy h3{font-size:clamp(15px,3.8vw,21px);line-height:1.16}
+ #nosotros .identity-product-name{font-size:7px;margin-bottom:8px;letter-spacing:.035em}
+ #nosotros .identity-product-benefit{font-size:7px;line-height:1.45;margin-top:9px;min-height:20px}
+ .home-pathway-grid{grid-template-columns:1fr}
+ .home-pathway-grid>a{padding:26px}
+ .soil-overview{padding-top:40px;padding-bottom:35px}
+ .soil-overview-grid{grid-template-columns:1fr;gap:28px}
+ .soil-overview h1{font-size:39px}
+ .soil-overview p{font-size:15px}
+ .soil-overview img{aspect-ratio:4/3;max-height:310px}
+ .soil-local-nav{gap:8px}.soil-local-nav a{font-size:11px;padding:10px 11px}
+ .soil-product-grid,.soil-organic-grid{grid-template-columns:1fr}
+ .soil-product-photo{padding:18px}
+ .soil-product-photo img{height:360px}
+ .soil-product-copy{padding:25px 22px}
+ .soil-product-copy h3{font-size:28px}
+ .soil-product-copy>p{font-size:14px}
+ .soil-organic-grid{gap:24px}
+ .soil-organic{padding-block:45px}
+}
+@media(prefers-reduced-motion:reduce){.home-pathway-grid>a{transition:none}.home-pathway-grid>a:hover{transform:none}}

@@ -1,37 +1,63 @@
 'use strict';
-// Orientación en la página: enlaces nativos y sección activa, sin ocultar contenido.
+// Áreas independientes con enlaces compartibles e historial nativo.
+// Sin JavaScript, todo el contenido conserva sus anclas y sigue disponible.
 (()=>{
  const header=document.querySelector('.header');
  const select=document.getElementById('page-section-select');
  const jump=document.querySelector('.page-section-jump');
- if(!header||!select||!jump)return;
- const ids=['nosotros','asesor','combos','lineas','tricho-sustrato','humicos','analisis','garantia'];
- const sections=ids.map(id=>document.getElementById(id)).filter(Boolean);
+ const panels=[...document.querySelectorAll('[data-site-panel]')];
+ if(!header||!select||!jump||!panels.length)return;
+ const names={inicio:'Inicio',nosotros:'Nosotros',asesor:'Asesor',combos:'Combos',lineas:'Productos',suelo:'Suelo',garantia:'Acompañamiento'};
+ const aliases={'productos':'lineas','tricho-sustrato':'lineas','humicos':'suelo','fulvicos':'suelo','soluciones-suelo':'suelo','materia-organica':'suelo','analisis':'suelo','acompanamiento':'garantia'};
  const links=[...header.querySelectorAll('.navlinks a[href^="#"]')];
- let frame=null,headerHeight=0;
- function update(){
-  frame=null;
-  const height=Math.ceil(header.getBoundingClientRect().height);
-  if(height!==headerHeight){headerHeight=height;document.documentElement.style.setProperty('--galyon-header-height',height+'px');}
-  let current='inicio';
-  for(const section of sections){if(section.getBoundingClientRect().top<=height+40)current=section.id;}
-  const group=current==='humicos'||current==='tricho-sustrato'?'lineas':current;
-  for(const link of links){if(link.hash==='#'+group)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');}
-  if(select.value!==current)select.value=current;
- }
- function schedule(){if(frame===null)frame=requestAnimationFrame(update);}
- select.addEventListener('change',()=>{
-  const target=document.getElementById(select.value);
-  if(!target)return;
+ let current='inicio';
+ function hashId(){try{return decodeURIComponent(location.hash.slice(1));}catch{return '';}}
+ function height(){document.documentElement.style.setProperty('--galyon-header-height',Math.ceil(header.getBoundingClientRect().height)+'px');}
+ function closeMenu(){
   document.getElementById('navlinks')?.classList.remove('is-open');
   document.getElementById('menu-toggle')?.setAttribute('aria-expanded','false');
-  if(select.value==='inicio'&&window.resetToHome){window.resetToHome();schedule();return;}
-  if(location.hash==='#'+target.id)target.scrollIntoView({block:'start'});
-  else location.hash=target.id;
+ }
+ function show({scroll=true,focus=false}={}){
+  const id=hashId();
+  const modal=id.startsWith('detalle-');
+  const target=document.getElementById(id);
+  const view=modal?'lineas':aliases[id]||(names[id]?id:target?.closest('[data-site-panel]')?.dataset.sitePanel)||'inicio';
+  const changed=view!==current;
+  current=view;
+  panels.forEach(panel=>{panel.hidden=panel.dataset.sitePanel!==view;});
+  document.body.dataset.siteView=view;
+  document.body.classList.add('has-section-views');
+  document.title=view==='inicio'?'GALYON | Biotecnología aplicada a la agricultura':names[view]+' | GALYON';
+  links.forEach(link=>{if(link.hash==='#'+view)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
+  select.value=view;
+  closeMenu();height();
+  if(modal)return;
+  if(scroll)requestAnimationFrame(()=>{
+   const panel=panels.find(p=>p.dataset.sitePanel===view);
+   const anchor=target&&!target.hidden&&target!==panel?target:null;
+   if(anchor)anchor.scrollIntoView({block:'start',behavior:'instant'});
+   else window.scrollTo({top:0,left:0,behavior:'instant'});
+   if(focus&&changed){
+    const heading=panel?.querySelector('h1,h2');
+    if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
+   }
+  });
+ }
+ select.addEventListener('change',()=>{
+  const next=select.value;
+  if(next==='inicio'&&window.resetToHome){window.resetToHome();return;}
+  if(location.hash==='#'+next)show({focus:true});else location.hash=next;
  });
- window.addEventListener('scroll',schedule,{passive:true});
- window.addEventListener('resize',schedule,{passive:true});
- window.addEventListener('hashchange',schedule);
- if('ResizeObserver' in window)new ResizeObserver(schedule).observe(header);
- jump.hidden=false;update();
+ document.addEventListener('click',event=>{
+  if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  const link=event.target.closest('a[href^="#"]');
+  if(!link||link.classList.contains('brand'))return;
+  if(link.hash===location.hash&&link.hash){event.preventDefault();show({focus:true});}
+ });
+ window.addEventListener('hashchange',()=>show({focus:true}));
+ window.addEventListener('galyon:home',()=>show({focus:true}));
+ window.addEventListener('resize',height,{passive:true});
+ window.addEventListener('load',()=>show({scroll:!!location.hash}),{once:true});
+ if('ResizeObserver' in window)new ResizeObserver(height).observe(header);
+ jump.hidden=false;show();
 })();

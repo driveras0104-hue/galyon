@@ -9,7 +9,7 @@ const PRODUCTS = {
   'insecta-beauveria': {name:'GALYON INSECTA · Beauveria bassiana', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'insecta-metarhizium': {name:'GALYON INSECTA · Metarhizium anisopliae', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'promo-tricho-humicos': {name:'Promoción TRICHO + ácidos húmicos', line:'promo', image:'assets/promo-tricho-humicos.webp', unit:40, unitLabel:'combo', sizeLabel:'2 litros de TRICHO + 1 kg de ácidos húmicos de regalo', freeShipping:true},
-  'acidos-humicos-1kg': {name:'Ácidos Húmicos 50 %', line:'humicos', image:'assets/acidos-humicos-50.webp?v=3', unit:15, unitLabel:'paquete', sizeLabel:'1 kg'},
+  'acidos-humicos-1kg': {name:'Ácidos Húmicos 50 %', line:'humicos', image:'assets/acidos-humicos-empaque.webp?v=5.8.0', unit:15, unitLabel:'paquete', sizeLabel:'1 kg'},
   'tricho-sustrato-1kg': {name:'GALYON TRICHO en sustrato', line:'tricho', image:'assets/tricho-sustrato.webp', unit:25, unitLabel:'paquete', sizeLabel:'1 kg'},
   'combo-cacao': {freeShipping:true, name:'Cacao Vital · 2 L TRICHO + 2 L BACT', line:'combo', image:'assets/linea-tricho.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},
   'combo-mango': {freeShipping:true, name:'Mango Selecto · 2 L BACT + 2 L INSECTA', line:'combo', image:'assets/linea-bact.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},
@@ -165,6 +165,7 @@ function resetToHome(e) {
    history.replaceState(null, '', window.location.pathname + window.location.search);
   } catch(err) {}
  }
+ window.dispatchEvent(new CustomEvent('galyon:home'));
  return false;
 }
 window.resetToHome = resetToHome;
@@ -188,8 +189,9 @@ function dismissGalyonModal(event){
  if(event)event.preventDefault();
  const keepY = lineReturnScrollY ?? window.scrollY;
  document.querySelectorAll('.galyon-modal').forEach(m => m.classList.add('is-dismissed'));
- // Sustituimos el hash en vez de enlazar a #lineas, evitando el salto.
- history.replaceState(history.state,'',window.location.pathname+window.location.search);
+ // Conservamos el área de Productos sin provocar un salto al cerrar la ficha.
+ const sectionHash=document.body.classList.contains('has-section-views')?'#lineas':'';
+ history.replaceState(history.state,'',window.location.pathname+window.location.search+sectionHash);
  window.scrollTo({top:keepY,left:0,behavior:'instant'});
  requestAnimationFrame(() => window.scrollTo({top:keepY,left:0,behavior:'instant'}));
  lineReturnScrollY = null;
