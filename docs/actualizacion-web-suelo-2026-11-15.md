@@ -61,3 +61,11 @@ Las etiquetas de ambos productos son accesibles a tamaño completo desde Suelo.
 
 La promoción conserva $40 por 2 L de TRICHO + 1 kg de húmicos de regalo y envío
 gratis. Su imagen usa el empaque nuevo y una URL diferenciada para evitar caché.
+
+## Ajuste de orden y acceso directo a productos
+
+Nosotros vuelve al primer lugar del menú, seguido de Productos, Suelo, Combos,
+Asesor y Acompañamiento. El selector móvil y los accesos de Inicio mantienen
+el mismo orden. Suelo comienza directamente con húmicos y fúlvicos: se retiran
+la portada, la imagen introductoria y el texto de presentación. Se conserva
+solo un título breve y accesos a análisis y materia orgánica.

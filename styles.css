@@ -1795,16 +1795,13 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 
 /* Suelo: productos, materia orgánica y diagnóstico en una misma área. */
 .soil-chapter{background:#fff}
-.soil-overview{padding-bottom:58px;background:#f1f6ed}
-.soil-overview-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}
-.soil-overview h1{font-family:'Manrope','DM Sans',Arial,sans-serif;font-size:clamp(38px,4.2vw,60px);line-height:1.12;letter-spacing:-.055em;margin:20px 0 24px;color:var(--forest);font-weight:700}
-.soil-overview h1 em{font-style:normal;color:#62824e}
-.soil-overview p{font-size:17px;line-height:1.8;color:#526c59;max-width:520px}
-.soil-overview img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:14px}
 .soil-local-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .soil-local-nav a{padding:11px 14px;border:1px solid #c8d8bf;border-radius:5px;font-size:12px;font-weight:700;color:var(--forest);background:#fff}
 .soil-local-nav a:hover{background:#e5efd9}
-.soil-products{padding-bottom:55px}
+.soil-products{padding-top:28px;padding-bottom:55px}
+.soil-products-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.soil-products-header h1{margin:0;font-size:28px;line-height:1.2;letter-spacing:-.03em;color:var(--forest)}
+.soil-products-header .soil-local-nav{margin:0}
 .soil-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .soil-product-card{overflow:hidden;min-width:0;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;background:#fff;scroll-margin-top:calc(var(--galyon-header-height,90px) + 20px)}
 .soil-product-photo{position:relative;background:#fff;border-bottom:1px solid var(--line);padding:24px}
@@ -1840,7 +1837,6 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
  #nosotros .identity-product-copy h3{font-size:clamp(20px,3.1vw,29px)}
  #nosotros .identity-product-name{font-size:10px}
  #nosotros .identity-product-benefit{font-size:10px}
- .soil-overview-grid{gap:30px}
  .home-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .soil-product-copy{padding:23px}
  .soil-product-copy h3{font-size:25px}
@@ -1852,12 +1848,11 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
  #nosotros .identity-product-benefit{font-size:7px;line-height:1.45;margin-top:9px;min-height:20px}
  .home-pathway-grid{grid-template-columns:1fr}
  .home-pathway-grid>a{padding:26px}
- .soil-overview{padding-top:40px;padding-bottom:35px}
- .soil-overview-grid{grid-template-columns:1fr;gap:28px}
- .soil-overview h1{font-size:39px}
- .soil-overview p{font-size:15px}
- .soil-overview img{aspect-ratio:4/3;max-height:310px}
- .soil-local-nav{gap:8px}.soil-local-nav a{font-size:11px;padding:10px 11px}
+ .soil-products{padding-top:20px}
+ .soil-products-header{gap:12px;margin-bottom:16px}
+ .soil-products-header h1{font-size:24px}
+ .soil-products-header .soil-local-nav{gap:6px}
+ .soil-local-nav a{font-size:11px;padding:7px 8px}
  .soil-product-grid,.soil-organic-grid{grid-template-columns:1fr}
  .soil-product-photo{padding:18px}
  .soil-product-photo img{height:360px}
