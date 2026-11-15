@@ -77,3 +77,25 @@ Nosotros incorpora el texto personal aprobado por el fundador, con el título
 a Violeta. La historia se muestra abierta inicialmente también en móvil.
 El acceso a asesoría sale de la primera fotografía y pasa debajo de la secuencia,
 como botón compacto «Quiero asesoría a distancia» enlazado a WhatsApp.
+
+## Suelo, promoción y cierre con visita real
+
+Las descripciones de húmicos y fúlvicos explican desarrollo radicular,
+disponibilidad y aprovechamiento de nutrientes sin prometer rendimientos ni
+ahorros garantizados. La sección educativa de materia orgánica incorpora una
+imagen ilustrativa de compost. No se añaden productos orgánicos ni precios sin
+confirmación de proveedor y disponibilidad.
+
+La promoción conserva la composición original y el nuevo empaque. Se corrigen
+4.105 píxeles del halo del recorte; el interior de la etiqueta, las botellas y
+los textos permanecen intactos. La URL de la imagen cambia para evitar caché.
+
+El cierre común incorpora la fotografía real IMG_3181.JPG de una visita del
+fundador. Foto y texto se presentan en una tarjeta, con orientación gratuita
+únicamente a distancia mediante WhatsApp. El footer mantiene el contacto y
+su navegación, con un tratamiento más compacto del logo y los espacios.
+
+Por solicitud posterior, la dedicatoria de Violeta se retira del texto principal.
+Queda al final del footer, desplegable bajo «Una promesa.», únicamente al ver
+Nosotros. En las demás áreas se oculta también de las tecnologías de asistencia
+mediante display:none.

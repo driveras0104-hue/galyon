@@ -1890,5 +1890,53 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .soil-label-preview>span{display:block;font-size:12px;font-weight:700;padding-top:12px;line-height:1.5}
 .soil-label-preview:hover>span{text-decoration:underline;text-underline-offset:3px}
 
-/* Historia del fundador: la nota personal acompaña sin competir con el texto. */
-#nosotros .intro-story .founder-note{margin:22px 0 18px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;line-height:1.8;color:#68786b}
+
+/* Nutrición del suelo: resultados concretos antes de las especificaciones. */
+.soil-product-copy .soil-product-lead{font-size:18px;line-height:1.4;font-weight:750;color:var(--forest);margin-bottom:14px}
+.soil-product-copy>p:not(.soil-product-price):not(.soil-product-kicker){margin-bottom:18px}
+.soil-organic-intro{display:grid;grid-template-columns:1fr .85fr;gap:54px;align-items:center}
+.soil-organic-photo{margin:0;min-width:0}
+.soil-organic-photo img{display:block;width:100%;height:330px;object-fit:cover;object-position:center 60%;border-radius:12px}
+.soil-organic-photo figcaption{font-size:11px;line-height:1.6;color:#64795e;margin-top:10px}
+/* Cierre con una visita real: fotografía despejada y consulta por WhatsApp. */
+.closing.closing-contact{background:#f1f5ed;color:var(--forest);text-align:left;padding:54px 0}
+.closing-contact .closing-inner{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch;gap:0;border:1px solid #dce5d6;border-radius:14px;overflow:hidden;background:#fff}
+.closing-photo{position:relative;margin:0;min-width:0;min-height:360px}
+.closing-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:53% 50%}
+.closing-copy{min-width:0;padding:42px 46px;display:flex;flex-direction:column;align-items:flex-start}
+.closing-eyebrow{font-size:10px;letter-spacing:.14em;line-height:1.4;color:#5c8150;font-weight:800;margin-bottom:18px}
+.closing-contact h2{font-size:clamp(30px,3.1vw,43px);line-height:1.12;letter-spacing:-.045em}
+.closing-contact h2 em{color:#709652}
+.closing-contact p{font-size:15px;line-height:1.75;color:#576d5c;margin:20px 0 25px;max-width:410px}
+.closing-contact .btn{font-size:12px;min-height:46px;padding:13px 18px;gap:22px;white-space:normal;text-align:left}
+.closing-note{font-size:11px;line-height:1.6;color:#687f68;margin-top:14px}
+.footer{padding-top:46px}
+.footer .brand{background:transparent;border-radius:0;padding:0}
+.footer .brand img{filter:brightness(0) invert(1);opacity:.93}
+.footer-top{gap:45px;padding-bottom:38px}
+.footer-brand p{margin-top:17px}
+.footer-top a{overflow-wrap:anywhere}
+@media(max-width:760px){
+ .soil-organic-intro{grid-template-columns:1fr;gap:20px}
+ .soil-organic-photo img{height:270px}
+ .closing.closing-contact{padding:30px 0}
+ .closing-contact .closing-inner{grid-template-columns:minmax(0,1fr)}
+ .closing-photo{min-height:0;aspect-ratio:4/3}
+ .closing-copy{padding:27px 24px 29px}
+ .closing-eyebrow{font-size:9px;margin-bottom:15px}
+ .closing-contact h2{font-size:32px}
+ .closing-contact p{font-size:14px;margin:17px 0 22px}
+ .closing-contact .btn{width:100%;min-height:48px;font-size:12px;padding:13px 15px;gap:12px}
+ .closing-note{font-size:10px}
+ .footer{padding-top:34px}
+ .footer-top{gap:28px;padding-bottom:30px}
+}
+
+/* Dedicatoria reservada al final de Nosotros; fuera del discurso comercial. */
+.founder-dedication{display:none;margin-top:13px}
+body[data-site-view="nosotros"] .founder-dedication{display:block}
+.founder-dedication summary{width:fit-content;list-style:none;cursor:pointer;font-size:10px;line-height:1.6;color:#afc3b1;padding:13px 0;min-height:42px}
+.founder-dedication summary::-webkit-details-marker{display:none}
+.founder-dedication summary:hover{color:#dfebd5}
+.founder-dedication summary:focus-visible{outline:2px solid #b6d68a;outline-offset:4px}
+.founder-dedication p{max-width:610px;margin:3px 0 4px;font-size:12px;line-height:1.85;color:#b5c9b7}
