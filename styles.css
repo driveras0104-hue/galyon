@@ -1778,6 +1778,7 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .home-pathway-grid p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 25px}
 .home-pathway-grid>a>span{margin-top:auto;font-size:12px;font-weight:700;color:var(--forest)}
 #nosotros .galyon-showcase .identity-photo-solution::before{display:none}
+#nosotros .galyon-showcase .identity-gallery-steps .identity-photo{aspect-ratio:auto}
 #nosotros .identity-product-slides{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr)}
 #nosotros .identity-sequence-slide.identity-product-slide{position:relative;inset:auto;grid-area:1/1;display:flex;flex-direction:column;height:auto;min-width:0;background:#fff}
 #nosotros .identity-product-copy{flex:1;padding:18px 16px 17px;background:#fff;min-width:0;color:var(--forest)}
@@ -1786,7 +1787,8 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 #nosotros .identity-product-benefit{margin:11px 0 0;font-size:8px;line-height:1.5;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#52705a}
 #nosotros .identity-product-slide>img{position:static;display:block;flex:none;width:100%;height:auto;aspect-ratio:900/880;object-fit:cover}
 #nosotros .identity-photo-solution::after{display:none}
-#nosotros .identity-photo-solution figcaption{position:relative;inset:auto;padding:10px 12px;background:var(--forest);pointer-events:none;text-shadow:none;line-height:1.4}
+#nosotros .galyon-showcase .identity-gallery-steps .identity-photo-solution figcaption{position:relative;inset:auto;padding:10px 12px;background:var(--forest);pointer-events:none;text-shadow:none;line-height:1.4}
+.has-section-views h1[tabindex="-1"]:focus,.has-section-views h2[tabindex="-1"]:focus{outline:none}
 
 /* Suelo: productos, materia orgánica y diagnóstico en una misma área. */
 .soil-chapter{background:#fff}
