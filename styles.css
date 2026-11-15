@@ -1876,3 +1876,15 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .products .product-bottom .view-line{width:100%;min-height:46px;justify-content:space-between;padding:14px 16px;white-space:normal}
 .products .product-card:active{border-color:#7ea366}
 @media(hover:none){.products .product-card:hover{transform:none}.products .product-visual-hint{font-size:12px;min-height:44px}}
+
+/* Entrada directa al asesor, con instrucciones para usarlo. */
+#asesor{padding-top:54px}
+#asesor .advisor-shell{gap:25px}
+#asesor .advisor-start{max-width:900px;margin:0;text-align:left}
+#asesor .advisor-start .eyebrow{margin:0 0 13px}
+#asesor .advisor-start h2{font-size:clamp(29px,3.1vw,42px);line-height:1.16;letter-spacing:-.045em;margin:0 0 15px;color:var(--forest)}
+#asesor .advisor-start>p{font-size:15px;line-height:1.7;color:#58705d;max-width:730px;margin:0}
+#lineas .product-card .product-visual{height:auto!important;aspect-ratio:auto!important;min-height:0}
+#lineas .product-card .product-visual .line-photo{height:auto!important;max-height:none;aspect-ratio:auto!important;object-fit:contain!important;transform:none!important}
+#detalle-tricho .tricho-gallery-slides .tricho-gallery-slide{object-fit:contain!important;object-position:center!important;background:#f4f7f0}
+@media(max-width:600px){#asesor{padding-top:30px}#asesor .advisor-shell{gap:20px}#asesor .advisor-start>p{font-size:14px}}
