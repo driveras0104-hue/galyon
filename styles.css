@@ -1487,7 +1487,7 @@
   .soil-plan-summary { column-gap: 12px; }
 }
 
-/* Fotos de las tres líneas: 15 % menos de altura respecto a 9 / 14. */
+/* Las fotos del catálogo conservan su proporción para mostrar cada botella completa. */
 .products .product-card .product-visual {
   min-height: 0;
   overflow: hidden!important;
@@ -1495,8 +1495,8 @@
 .products .product-card .product-visual .line-photo {
   width: 100%;
   height: auto!important;
-  aspect-ratio: 9 / 11.9!important;
-  object-fit: cover!important;
+  aspect-ratio: auto!important;
+  object-fit: contain!important;
   object-position: center!important;
 }
 
@@ -1777,17 +1777,20 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .home-pathway-grid h3{font-size:24px;line-height:1.2;letter-spacing:-.035em;margin:20px 0 12px;color:var(--forest)}
 .home-pathway-grid p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 25px}
 .home-pathway-grid>a>span{margin-top:auto;font-size:12px;font-weight:700;color:var(--forest)}
-#nosotros .galyon-showcase .identity-photo-solution::before{display:none}
+#nosotros .galyon-showcase .identity-photo-solution::before{display:block}
 #nosotros .galyon-showcase .identity-gallery-steps .identity-photo{aspect-ratio:auto}
-#nosotros .identity-product-slides{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr)}
-#nosotros .identity-sequence-slide.identity-product-slide{position:relative;inset:auto;grid-area:1/1;display:flex;flex-direction:column;height:auto;min-width:0;background:#fff}
+#nosotros .identity-product-slides{position:absolute;inset:0;display:block}
+#nosotros .identity-sequence-slide.identity-product-slide{position:absolute;inset:0;display:block;height:100%;min-width:0}
 #nosotros .identity-product-copy{flex:1;padding:18px 16px 17px;background:#fff;min-width:0;color:var(--forest)}
 #nosotros .identity-product-name{margin:0 0 9px;font-size:8px;line-height:1.3;font-weight:700;letter-spacing:.08em}
 #nosotros .identity-product-copy h3{font-family:'Manrope','DM Sans',Arial,sans-serif;margin:0;font-size:clamp(16px,1.65vw,22px);line-height:1.13;letter-spacing:-.035em;font-weight:700;color:var(--forest)}
 #nosotros .identity-product-benefit{margin:11px 0 0;font-size:8px;line-height:1.5;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#52705a}
-#nosotros .identity-product-slide>img{position:static;display:block;flex:none;width:100%;height:auto;aspect-ratio:900/880;object-fit:cover}
-#nosotros .identity-photo-solution::after{display:none}
-#nosotros .galyon-showcase .identity-gallery-steps .identity-photo-solution figcaption{position:relative;inset:auto;padding:10px 12px;background:var(--forest);pointer-events:none;text-shadow:none;line-height:1.4}
+#nosotros .identity-product-slide>img{display:block;width:100%;height:100%;object-fit:cover}
+#nosotros .identity-photo-solution::after{display:block;pointer-events:none}
+#nosotros .galyon-showcase .identity-gallery-steps .identity-photo-solution figcaption{position:absolute;left:12px;right:8px;bottom:12px;padding:0;background:transparent;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,.35);line-height:1.4}
+#nosotros .identity-whatsapp{position:absolute;left:14px;right:14px;bottom:66px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:11px 12px;border:1px solid #d7e5d1;border-radius:5px;background:rgba(255,255,255,.96);font-size:12px;font-weight:750;color:#143d2c;box-shadow:0 4px 15px #0b291d25}
+#nosotros .identity-whatsapp:hover{background:#eaf3e5}
+@media(max-width:600px){#nosotros .identity-whatsapp{left:9px;right:9px;bottom:64px;padding:10px 8px;font-size:10px}}
 .has-section-views h1[tabindex="-1"]:focus,.has-section-views h2[tabindex="-1"]:focus{outline:none}
 
 /* Suelo: productos, materia orgánica y diagnóstico en una misma área. */
@@ -1865,3 +1868,11 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
  .soil-organic{padding-block:45px}
 }
 @media(prefers-reduced-motion:reduce){.home-pathway-grid>a{transition:none}.home-pathway-grid>a:hover{transform:none}}
+
+/* Una señal de apertura visible también en pantallas táctiles. */
+.products .product-visual-hint{position:absolute;bottom:17px;right:22px;z-index:2;display:inline-flex;align-items:center;gap:16px;min-height:42px;padding:10px 13px;border:1px solid rgba(20,61,44,.15);border-radius:5px;background:rgba(255,255,255,.95);color:var(--forest);font-size:11px;font-weight:800;box-shadow:0 3px 12px #143d2c15;pointer-events:none}
+.products .product-visual-hint>span{font-size:16px;line-height:1}
+.products .product-bottom{flex-wrap:wrap}
+.products .product-bottom .view-line{width:100%;min-height:46px;justify-content:space-between;padding:14px 16px;white-space:normal}
+.products .product-card:active{border-color:#7ea366}
+@media(hover:none){.products .product-card:hover{transform:none}.products .product-visual-hint{font-size:12px;min-height:44px}}
