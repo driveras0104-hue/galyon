@@ -1293,6 +1293,9 @@
 @keyframes galyonRemoteAdvice{0%,30%{opacity:0}33%,66%{opacity:1}69%,100%{opacity:0}}
 @keyframes galyonFieldVisit{0%,63%{opacity:0}66%,97%{opacity:1}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){#nosotros .identity-remote-photo .frame-remote,#nosotros .identity-remote-photo .frame-visit{animation:none;opacity:0}}
+#nosotros .identity-field-pair .frame-visit{animation:galyonFieldPair 10s ease-in-out infinite;opacity:0}
+@keyframes galyonFieldPair{0%,44%{opacity:0}50%,94%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){#nosotros .identity-field-pair .frame-visit{animation:none;opacity:0}}
 
 /* v5.4.3: Keep the advisor stationary while its content changes. */
 #advisor-app,#advisor-content{overflow-anchor:none;}

@@ -125,3 +125,9 @@ NODUM se incorpora después de los húmicos y fúlvicos, antes de los planes de 
 En pantallas de hasta760px, cada foto de línea abre su ficha y muestra una única pastilla «Ver presentaciones»; el botón verde inferior se oculta, manteniendo descripción y precio. En computadora, la pastilla sobre la foto se oculta y queda el botón bajo el precio. Se retiran las flechas de estos accesos y se conserva el retorno a la posición de lectura al cerrar una ficha.
 
 La primera foto de Nosotros usa el original IMG_8060.HEIC, correspondiente al tejido abierto de banano enviado por el usuario. La edición se limita a exposición, color, contraste y enfoque leves, sin regenerar ni alterar los elementos. La imagen se mantiene dentro de su tarjeta, con rótulo al pie. El acceso a asesoría a distancia se presenta como una pastilla compacta con el símbolo de WhatsApp, sin flecha, debajo de las fotos.
+
+## Pareja de fotos confirmada y contorno de NODUM
+
+El usuario elige B y C para la primera tarjeta: conversación de espaldas (`nosotros-acompanamiento-campo.webp`) y revisión del tejido de banano (`nosotros-revision-tejido-banano.webp`). Alternan con un fundido equilibrado; con movimiento reducido se muestra B. Se retira la conversación de frente de esa tarjeta.
+
+NODUM usa `nodum-250g-contorno-limpio.webp`, con fondo exterior transparente y margen uniforme. El recorte parte de la fuente completa aprobada, archivada en `sources/asesor/productos/nodum-250g-fuente-completa.png`. La etiqueta y los píxeles interiores del empaque conservan los colores originales, sin regeneración; se verifica la igualdad tras decodificar el WebP sin pérdida. Se actualiza también la miniatura del carrito y el enlace para ampliar. Precio y presentación siguen en $12 por250g.
