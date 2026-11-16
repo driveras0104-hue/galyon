@@ -1286,6 +1286,10 @@
 #nosotros .identity-gallery-steps .identity-photo{min-height:320px}
 @media(max-width:800px){#nosotros .identity-gallery.identity-gallery-steps{grid-template-columns:repeat(2,minmax(0,1fr));min-height:0}#nosotros .identity-gallery-steps .identity-photo{min-height:240px}}
 @media(max-width:400px){#nosotros .identity-gallery-steps .identity-photo{min-height:200px}}
+@media(max-width:760px){
+ #nosotros.intro{padding-top:24px}
+ #nosotros .galyon-showcase-title{margin-bottom:16px}
+}
 
 /* En campo y a distancia: inspección, asesoría remota y acompañamiento. */
 #nosotros .identity-remote-photo .frame-remote{animation:galyonRemoteAdvice 9s ease-in-out infinite;opacity:0}

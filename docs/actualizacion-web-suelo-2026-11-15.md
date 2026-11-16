@@ -131,3 +131,9 @@ La primera foto de Nosotros usa el original IMG_8060.HEIC, correspondiente al te
 El usuario elige B y C para la primera tarjeta: conversación de espaldas (`nosotros-acompanamiento-campo.webp`) y revisión del tejido de banano (`nosotros-revision-tejido-banano.webp`). Alternan con un fundido equilibrado; con movimiento reducido se muestra B. Se retira la conversación de frente de esa tarjeta.
 
 NODUM usa `nodum-250g-contorno-limpio.webp`, con fondo exterior transparente y margen uniforme. El recorte parte de la fuente completa aprobada, archivada en `sources/asesor/productos/nodum-250g-fuente-completa.png`. La etiqueta y los píxeles interiores del empaque conservan los colores originales, sin regeneración; se verifica la igualdad tras decodificar el WebP sin pérdida. Se actualiza también la miniatura del carrito y el enlace para ampliar. Precio y presentación siguen en $12 por250g.
+
+## Entrada visual unificada y recarga al inicio
+
+La entrada principal abre Nosotros, con el título «De entender el problema a proteger tu cosecha» y la secuencia de imágenes, en móvil y escritorio. Se retiran la portada antigua y sus accesos introductorios con flechas. En celular se reduce el margen superior para mostrar las fotografías en la primera pantalla. Las primeras imágenes se cargan de forma prioritaria.
+
+El logo, la entrada sin ancla y el enlace antiguo `#inicio` llevan a Nosotros. La recarga vuelve a Nosotros desde arriba y cierra vistas transitorias, conservando el carrito. Las entradas nuevas con anclas específicas y la navegación atrás/adelante mantienen su destino. La restauración automática de desplazamiento se desactiva durante la página recargada para impedir que el navegador móvil devuelva al punto anterior después de cargar.

@@ -7,10 +7,10 @@
  const jump=document.querySelector('.page-section-jump');
  const panels=[...document.querySelectorAll('[data-site-panel]')];
  if(!header||!select||!jump||!panels.length)return;
- const names={inicio:'Inicio',nosotros:'Nosotros',asesor:'Asesor',combos:'Combos',lineas:'Productos',suelo:'Suelo',garantia:'Acompañamiento'};
- const aliases={'productos':'lineas','tricho-sustrato':'lineas','humicos':'suelo','fulvicos':'suelo','nodum':'suelo','soluciones-suelo':'suelo','materia-organica':'suelo','analisis':'suelo','acompanamiento':'garantia'};
+ const names={nosotros:'Nosotros',asesor:'Asesor',combos:'Combos',lineas:'Productos',suelo:'Suelo',garantia:'Acompañamiento'};
+ const aliases={'inicio':'nosotros','productos':'lineas','tricho-sustrato':'lineas','humicos':'suelo','fulvicos':'suelo','nodum':'suelo','soluciones-suelo':'suelo','materia-organica':'suelo','analisis':'suelo','acompanamiento':'garantia'};
  const links=[...header.querySelectorAll('.navlinks a[href^="#"]')];
- let current='inicio';
+ let current='nosotros';
  function hashId(){try{return decodeURIComponent(location.hash.slice(1));}catch{return '';}}
  function height(){document.documentElement.style.setProperty('--galyon-header-height',Math.ceil(header.getBoundingClientRect().height)+'px');}
  function closeMenu(){
@@ -21,13 +21,13 @@
   const id=hashId();
   const modal=id.startsWith('detalle-');
   const target=document.getElementById(id);
-  const view=modal?'lineas':aliases[id]||(names[id]?id:target?.closest('[data-site-panel]')?.dataset.sitePanel)||'inicio';
+  const view=modal?'lineas':aliases[id]||(names[id]?id:target?.closest('[data-site-panel]')?.dataset.sitePanel)||'nosotros';
   const changed=view!==current;
   current=view;
   panels.forEach(panel=>{panel.hidden=panel.dataset.sitePanel!==view;});
   document.body.dataset.siteView=view;
   document.body.classList.add('has-section-views');
-  document.title=view==='inicio'?'GALYON | Biotecnología aplicada a la agricultura':names[view]+' | GALYON';
+  document.title=view==='nosotros'?'GALYON | Biotecnología aplicada a la agricultura':names[view]+' | GALYON';
   links.forEach(link=>{if(link.hash==='#'+view)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
   select.value=view;
   closeMenu();height();
