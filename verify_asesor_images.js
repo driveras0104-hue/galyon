@@ -187,7 +187,7 @@ assert.ok(advisorMatch, 'Could not find Advisor IIFE in script.js');
 const renderedImages = [];
 let interceptedHtml = '';
 
-const runnerSandbox = `
+const runnerSandbox = scriptJs.match(/const PRODUCTS = \{[\s\S]*?\n\};/)[0] + `
 const renderedImages = [];
 let interceptedHtml = "";
 
@@ -298,7 +298,7 @@ test('100% of dynamically rendered images exist on disk with exact casing', () =
   const errors = [];
 
   for (const relSrc of uniqueRenderedSrcs) {
-    const check = checkExactPath(ROOT_DIR, relSrc);
+    const check = checkExactPath(ROOT_DIR, decodeURIComponent(new URL(relSrc, "https://galyon.test/").pathname).replace(/^\//, ""));
     if (!check.exists) {
       errors.push(`Missing image: ${relSrc}`);
     } else if (!check.exactCase) {
@@ -686,6 +686,27 @@ test('Known advisor results select the right individual bottle in both result en
     assert.ok(html.includes(`data-advisor-product="${expected}"`), `${crop} / ${symptom}`);
     assert.strictEqual((html.match(/data-advisor-product=/g) || []).length, 1, symptom);
   }
+});
+
+test('Complementary recommendations match the problem and consultation message', () => {
+ for (const [crop,part,symptom,expected] of [
+  ['Cacao','Toda la planta','cacao_seco','Lasiodiplodia'],
+  ['Cacao','Raíces o tallo','cacao_raices','Protección + bioestimulación'],
+  ['Cacao','Toda la planta','cacao_debil','Húmicos + fúlvicos'],
+  ['Maíz','Hojas','maiz_clorosis_intervenal','Húmicos + fúlvicos'],
+  ['Maíz','Hojas','maiz_oruga','Protección + bioestimulación']
+ ]) {
+  sim.setData({area:'Finca o plantación',crop,part,symptom});
+  const html=sim.result();
+  assert.ok(html.includes(expected),symptom);
+  assert.ok(html.includes('advisor-complement-products'),symptom);
+  assert.ok(html.includes('Definimos contigo la cantidad'),symptom);
+  assert.ok(decodeURIComponent(html.match(/https:\/\/wa\.me[^"]+/)[0]).includes('Necesito orientación sobre cantidades'),symptom);
+  if(symptom==='cacao_seco')assert.ok(html.includes('POSIBLE CAUSA A VERIFICAR'));
+ }
+ sim.setData({area:'Finca o plantación',crop:'Papaya',part:'Hojas',symptom:'papaya_mosaico'});
+ assert.ok(!sim.result().includes('advisor-complement-products'),'No automatic recovery sale for suspected virus');
+ assert.ok(fs.readFileSync(path.join(ROOT_DIR,'index.html'),'utf8').indexOf('class="combo-grid"')<fs.readFileSync(path.join(ROOT_DIR,'index.html'),'utf8').indexOf('class="weekly-offer"'));
 });
 
 // ---------------------------------------------------------------------

@@ -1984,3 +1984,16 @@ body[data-site-view="nosotros"] .founder-dedication{display:block}
  .support-panel .support-answer{padding-right:0}
 }
 @media(prefers-reduced-motion:reduce){.support-panel .support-contact{transition:none}}
+
+/* Plan complementario del asesor: productos separados y cantidades por asesoría. */
+.combo-note + .weekly-offer{margin-top:36px;margin-bottom:0}
+.advisor-complement{margin:28px 0;padding:clamp(20px,3vw,32px);background:#f0f5e9;border:1px solid #dbe5d1;border-radius:22px;color:#173f30}
+.advisor-complement h4{font-size:clamp(23px,3vw,32px);line-height:1.15;margin:10px 0 16px}
+.advisor-complement p{line-height:1.65}
+.advisor-complement-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.advisor-complement-products figure{margin:0;padding:18px;background:#fff;border-radius:16px;text-align:center;min-width:0}
+.advisor-complement-products img{width:100%;height:220px;object-fit:contain}
+.advisor-complement-products figcaption strong,.advisor-complement-products figcaption span{display:block;margin-top:8px;overflow-wrap:anywhere}
+.advisor-complement-products figcaption span{font-size:14px;color:#526b5b}
+.advisor-complement-note{font-size:14px;color:#526b5b}
+@media(max-width:480px){.advisor-complement-products{gap:10px}.advisor-complement-products figure{padding:12px 8px}.advisor-complement-products img{height:160px}.advisor-complement-products figcaption strong{font-size:14px}}
