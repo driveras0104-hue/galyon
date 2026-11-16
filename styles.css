@@ -1997,3 +1997,6 @@ body[data-site-view="nosotros"] .founder-dedication{display:block}
 .advisor-complement-products figcaption span{font-size:14px;color:#526b5b}
 .advisor-complement-note{font-size:14px;color:#526b5b}
 @media(max-width:480px){.advisor-complement-products{gap:10px}.advisor-complement-products figure{padding:12px 8px}.advisor-complement-products img{height:160px}.advisor-complement-products figcaption strong{font-size:14px}}
+
+/* Composición aprobada, recortada por viewport sin regenerar los envases. */
+#lineas .product-card .product-visual .line-photo-studio{display:block;width:100%;height:auto!important;aspect-ratio:3/4!important;max-height:none;background:#e9ece4;border-radius:10px;transform:none!important}
