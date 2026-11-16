@@ -1789,9 +1789,14 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 #nosotros .identity-photo-solution::after{display:block;pointer-events:none}
 #nosotros .galyon-showcase .identity-gallery-steps .identity-photo-solution figcaption{position:absolute;left:12px;right:8px;bottom:12px;padding:0;background:transparent;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,.35);line-height:1.4}
 #nosotros .identity-contact{margin-top:16px}
-#nosotros .identity-whatsapp{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:10px 14px;border:1px solid #cbd9c5;border-radius:5px;background:transparent;font-size:12px;font-weight:700;color:#143d2c}
-#nosotros .identity-whatsapp:hover{background:#eaf3e5}
-@media(max-width:600px){#nosotros .identity-contact{margin-top:12px}#nosotros .identity-whatsapp{gap:14px;padding:9px 12px;font-size:12px}}
+#nosotros .identity-whatsapp{display:inline-flex;align-items:center;justify-content:flex-start;gap:11px;min-height:56px;padding:8px 20px 8px 8px;border:1px solid #dce6d8;border-radius:999px;background:#fff;font-size:12px;color:#143d2c;box-shadow:0 3px 14px #143d2c08;transition:background .2s,border-color .2s,box-shadow .2s}
+#nosotros .identity-whatsapp:hover{background:#f4f8ef;border-color:#a9c493;box-shadow:0 4px 18px #143d2c10}
+#nosotros .identity-wa-symbol{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#e9f4df;color:#1d6e42}
+#nosotros .identity-wa-symbol svg{display:block;width:23px;height:23px}
+#nosotros .identity-wa-copy{display:flex;flex-direction:column;gap:3px;text-align:left;line-height:1.3}
+#nosotros .identity-wa-copy strong{font-size:13px;font-weight:800}
+#nosotros .identity-wa-copy>span{font-size:11px;font-weight:500;color:#637568}
+@media(max-width:600px){#nosotros .identity-contact{margin-top:14px}}
 .has-section-views h1[tabindex="-1"]:focus,.has-section-views h2[tabindex="-1"]:focus{outline:none}
 
 /* Suelo: productos, materia orgánica y diagnóstico en una misma área. */
@@ -1871,12 +1876,13 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 @media(prefers-reduced-motion:reduce){.home-pathway-grid>a{transition:none}.home-pathway-grid>a:hover{transform:none}}
 
 /* Una señal de apertura visible también en pantallas táctiles. */
-.products .product-visual-hint{position:absolute;bottom:17px;right:22px;z-index:2;display:inline-flex;align-items:center;gap:16px;min-height:42px;padding:10px 13px;border:1px solid rgba(20,61,44,.15);border-radius:5px;background:rgba(255,255,255,.95);color:var(--forest);font-size:11px;font-weight:800;box-shadow:0 3px 12px #143d2c15;pointer-events:none}
-.products .product-visual-hint>span{font-size:16px;line-height:1}
+.products .product-visual-link{display:block;position:relative}
+.products .product-visual-hint{position:absolute;bottom:18px;right:18px;z-index:2;display:none;align-items:center;justify-content:center;min-height:44px;padding:11px 18px;border:1px solid #ffffffcf;border-radius:999px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);color:var(--forest);font-size:13px;font-weight:800;box-shadow:0 4px 18px #143d2c18;pointer-events:none}
 .products .product-bottom{flex-wrap:wrap}
-.products .product-bottom .view-line{width:100%;min-height:46px;justify-content:space-between;padding:14px 16px;white-space:normal}
+.products .product-bottom .view-line{width:100%;min-height:48px;justify-content:center;padding:14px 20px;white-space:normal;border-radius:12px;box-shadow:inset 0 1px 0 #ffffff12;transition:background .2s,box-shadow .2s}
 .products .product-card:active{border-color:#7ea366}
-@media(hover:none){.products .product-card:hover{transform:none}.products .product-visual-hint{font-size:12px;min-height:44px}}
+@media(max-width:760px){.products .product-visual-hint{display:inline-flex}.products .product-bottom .view-line{display:none}.products .product-card{cursor:default}.products .product-visual-link{cursor:pointer}}
+@media(hover:none){.products .product-card:hover{transform:none}}
 
 /* Entrada directa al asesor, con instrucciones para usarlo. */
 #asesor{padding-top:54px}

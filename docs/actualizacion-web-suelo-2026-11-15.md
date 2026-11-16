@@ -119,3 +119,9 @@ preparan propuestas con imágenes reales para revisión del fundador.
 ## Incorporación de NODUM a Suelo
 
 NODUM se incorpora después de los húmicos y fúlvicos, antes de los planes de análisis. Usa el empaque aprobado de 250 g sin regenerar ni modificar la etiqueta. El usuario confirmó $12 por paquete; el SKU `nodum-250g` permite añadirlo al carrito, conserva cantidades y aplica el envío estándar de productos individuales. El enlace `#nodum` abre Suelo directamente. Materia orgánica permanece al final.
+
+## Accesos a presentaciones y nueva revisión en campo
+
+En pantallas de hasta760px, cada foto de línea abre su ficha y muestra una única pastilla «Ver presentaciones»; el botón verde inferior se oculta, manteniendo descripción y precio. En computadora, la pastilla sobre la foto se oculta y queda el botón bajo el precio. Se retiran las flechas de estos accesos y se conserva el retorno a la posición de lectura al cerrar una ficha.
+
+La primera foto de Nosotros usa el original IMG_8060.HEIC, correspondiente al tejido abierto de banano enviado por el usuario. La edición se limita a exposición, color, contraste y enfoque leves, sin regenerar ni alterar los elementos. La imagen se mantiene dentro de su tarjeta, con rótulo al pie. El acceso a asesoría a distancia se presenta como una pastilla compacta con el símbolo de WhatsApp, sin flecha, debajo de las fotos.

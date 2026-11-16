@@ -179,7 +179,7 @@ let lineReturnScrollY = null;
 const lineModalIds = new Set(['#detalle-tricho','#detalle-bact','#detalle-insecta']);
 
 // Guardamos la posición exacta antes de que el navegador navegue al ancla.
-document.querySelectorAll('.view-line[href^="#detalle-"]').forEach(link => {
+document.querySelectorAll('.view-line[href^="#detalle-"], .product-visual-link[href^="#detalle-"]').forEach(link => {
  link.addEventListener('click', () => {
   lineReturnScrollY = window.scrollY;
   document.querySelectorAll('.galyon-modal').forEach(m => m.classList.remove('is-dismissed'));
