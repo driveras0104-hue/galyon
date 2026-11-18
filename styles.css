@@ -2000,3 +2000,7 @@ body[data-site-view="nosotros"] .founder-dedication{display:block}
 
 /* Composición aprobada, recortada por viewport sin regenerar los envases. */
 #lineas .product-card .product-visual .line-photo-studio{display:block;width:100%;height:auto!important;aspect-ratio:3/4!important;max-height:none;background:#e9ece4;border-radius:10px;transform:none!important}
+
+/* TRICHO 1 kg: mostrar la funda y su etiqueta completas. */
+#tricho-sustrato>img{height:auto;max-height:440px;aspect-ratio:1;object-fit:contain;background:#fff}
+@media(max-width:800px){#tricho-sustrato>img{max-height:360px}}
