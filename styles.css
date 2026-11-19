@@ -1811,10 +1811,11 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
 .soil-local-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .soil-local-nav a{padding:11px 14px;border:1px solid #c8d8bf;border-radius:5px;font-size:12px;font-weight:700;color:var(--forest);background:#fff}
 .soil-local-nav a:hover{background:#e5efd9}
-.soil-products{padding-top:28px;padding-bottom:55px}
-.soil-products-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
-.soil-products-header h1{margin:0;font-size:28px;line-height:1.2;letter-spacing:-.03em;color:var(--forest)}
-.soil-products-header .soil-local-nav{margin:0}
+.soil-products{padding-top:48px;padding-bottom:55px}
+.soil-products-header{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-bottom:36px}
+.soil-products-header>div{flex:1;min-width:0}
+.soil-products-header h2{color:var(--forest)}
+.soil-products-header .soil-local-nav{margin:0;flex-shrink:0}
 .soil-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .soil-product-card{overflow:hidden;min-width:0;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;background:#fff;scroll-margin-top:calc(var(--galyon-header-height,90px) + 20px)}
 .soil-product-photo{position:relative;background:#fff;border-bottom:1px solid var(--line);padding:24px}
@@ -1866,9 +1867,8 @@ main #analisis.soilv2{background:#f8f4ec;padding-top:64px;scroll-margin-top:12px
  #nosotros .identity-product-benefit{font-size:7px;line-height:1.45;margin-top:9px;min-height:20px}
  .home-pathway-grid{grid-template-columns:1fr}
  .home-pathway-grid>a{padding:26px}
- .soil-products{padding-top:20px}
- .soil-products-header{gap:12px;margin-bottom:16px}
- .soil-products-header h1{font-size:24px}
+ .soil-products{padding-top:48px}
+ .soil-products-header{flex-direction:column;align-items:stretch;gap:22px;margin-bottom:30px}
  .soil-products-header .soil-local-nav{gap:6px}
  .soil-local-nav a{font-size:11px;padding:7px 8px}
  .soil-product-grid,.soil-organic-grid{grid-template-columns:1fr}
