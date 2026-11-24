@@ -8,10 +8,11 @@ const PRODUCTS = {
   'insecta-bt': {name:'GALYON INSECTA · Bacillus thuringiensis', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'insecta-beauveria': {name:'GALYON INSECTA · Beauveria bassiana', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
   'insecta-metarhizium': {name:'GALYON INSECTA · Metarhizium anisopliae', line:'insecta', image:'assets/linea-insecta.jpg', unit:20, unitLabel:'litro', sizeLabel:'1 litro'},
-  'promo-tricho-humicos': {name:'Promoción TRICHO + ácidos húmicos', line:'promo', image:'assets/promo-tricho-humicos-borde-corregido.webp?v=5.8.8', unit:40, unitLabel:'combo', sizeLabel:'2 litros de TRICHO + 1 kg de ácidos húmicos de regalo', freeShipping:true},
+  'promo-tricho-nodum': {name:'Black Friday · Estimula y protege', line:'promo', image:'assets/black-friday-tricho-nodum.webp', unit:40, regularPrice:80, unitLabel:'combo', sizeLabel:'3 botellas de TRICHO de 1 L + 1 NODUM de 250 g', freeShipping:true},
+  'promo-nodum-doble': {name:'Black Friday · NODUM, tu aliado para los días secos', line:'promo', image:'assets/black-friday-nodum-doble.webp', unit:30, regularPrice:40, unitLabel:'combo', sizeLabel:'2 paquetes de NODUM de 250 g', freeShipping:true},
   'acidos-humicos-1kg': {name:'Ácidos Húmicos 50 %', line:'humicos', image:'assets/acidos-humicos-empaque.webp?v=5.8.0', unit:12, unitLabel:'paquete', sizeLabel:'1 kg'},
   'acidos-fulvicos-1kg': {name:'Ácidos Fúlvicos 60 %', line:'fulvicos', image:'assets/acidos-fulvicos-etiqueta-tecnica-1kg.webp?v=5.8.4', unit:20, unitLabel:'paquete', sizeLabel:'1 kg'},
-  'nodum-250g': {name:'GALYON NODUM · Bioestimulante de algas marinas', line:'nodum', image:'assets/nodum-250g-contorno-limpio.webp', unit:12, unitLabel:'paquete', sizeLabel:'250 g'},
+  'nodum-250g': {name:'GALYON NODUM · Bioestimulante de algas marinas', line:'nodum', image:'assets/nodum-250g-contorno-limpio.webp', unit:20, unitLabel:'paquete', sizeLabel:'250 g'},
   'tricho-sustrato-1kg': {name:'GALYON TRICHO en sustrato sólido', line:'tricho', image:'assets/tricho-sustrato-etiqueta-1kg.webp?v=5.8.17', unit:25, unitLabel:'paquete', sizeLabel:'1 kg'},
   'combo-cacao': {freeShipping:true, name:'Cacao Vital · 2 L TRICHO + 2 L BACT', line:'combo', image:'assets/linea-tricho.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},
   'combo-mango': {freeShipping:true, name:'Mango Selecto · 2 L BACT + 2 L INSECTA', line:'combo', image:'assets/linea-bact.jpg', unit:60, unitLabel:'combo', sizeLabel:'4 litros'},
@@ -33,6 +34,7 @@ const STANDARD_SHIPPING=5;
 function money(value){return '$'+Number(value).toLocaleString('es-EC',{maximumFractionDigits:2});}
 function cartEntries(){return Object.entries(cart).filter(([sku,qty])=>PRODUCTS[sku]&&qty>0);}
 function subtotal(){return cartEntries().reduce((sum,[sku,qty])=>sum+PRODUCTS[sku].unit*qty,0);}
+function cartSavings(){return cartEntries().reduce((sum,[sku,qty])=>sum+Math.max(0,(PRODUCTS[sku].regularPrice||PRODUCTS[sku].unit)-PRODUCTS[sku].unit)*qty,0);}
 function shippingCost(){const rows=cartEntries();return rows.length&&rows.some(([sku])=>!PRODUCTS[sku].freeShipping)?STANDARD_SHIPPING:0;}
 function total(){return subtotal()+shippingCost();}
 function shippingCategory(){
@@ -52,7 +54,7 @@ function syncProductPrices(){
 function toast(message){const el=$('toast');if(!el)return;el.textContent=message;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2700)}
 function city(){return $('ship-city')?.value.trim()||''}
 function checkoutText(){
- const rows=cartEntries().map(([sku,qty])=>{const p=PRODUCTS[sku];return `• ${qty} × ${p.name} (${p.sizeLabel}) · ${money(p.unit)} c/u · ${money(p.unit*qty)}`;}).join('\n');
+ const rows=cartEntries().map(([sku,qty])=>{const p=PRODUCTS[sku];return `• ${qty} × ${p.name} (${p.sizeLabel}) · ${money(p.unit)} c/u · ${money(p.unit*qty)}`+(p.regularPrice?` · Precio regular: ${money(p.regularPrice*qty)} · Ahorro: ${money((p.regularPrice-p.unit)*qty)}`:'');}).join('\n');
  return `¡Hola, GALYON! Quisiera solicitar estos productos:
 
 ${rows}
@@ -61,6 +63,9 @@ Subtotal de productos: ${money(subtotal())}
 Envío: ${shippingShort()}
 Total del pedido: ${money(total())}
 ${shippingCategory()}${city()?'\nCiudad o cantón: '+city():''}
+
+Asesoría y seguimiento sin costo adicional con la compra de productos.
+No trabajamos con pago contra entrega.
 
 ¿Me confirman disponibilidad, entrega y métodos de pago?`;
 }
@@ -82,7 +87,7 @@ function renderCart(){
   return `<div class="cart-item"><img src="${p.image}" alt="Productos de la línea ${p.line}" loading="lazy"><div class="cart-item-main"><strong>${p.name}</strong><small>${p.sizeLabel||'1 litro'} por unidad · ${money(p.unit)} c/u</small><div class="qty"><button type="button" data-change="${sku}" data-delta="-1" aria-label="Restar una unidad de ${p.name}">−</button><span aria-label="${qty} unidades">${qty}</span><button type="button" data-change="${sku}" data-delta="1" aria-label="Añadir una unidad de ${p.name}">+</button></div><div class="cart-item-price">${money(p.unit*qty)}</div></div></div>`;
  }).join('');
  const deal=$('deal-status');
- if(deal)deal.textContent=shippingCategory()+(cart['promo-tricho-humicos']?' · '+cart['promo-tricho-humicos']+' kg de ácidos húmicos de regalo con tu promoción TRICHO.':'');
+ if(deal)deal.textContent=shippingCategory()+(cartSavings()?' · Ahorras '+money(cartSavings())+' en productos con Black Friday.':'');
  $('cart-subtotal').textContent=money(subtotal());
  $('cart-shipping').textContent=shippingShort();
  $('cart-total').textContent=money(total());
