@@ -18,3 +18,10 @@ Los beneficios incluyen déficit hídrico, establecimiento, floración, cuaje y 
 - `node verify_asesor_images.js`
 
 La entrega se prepara para revisión. La publicación de estos cambios en el sitio principal corresponde al programador después de la aprobación del usuario.
+
+## Precios de análisis y última revisión
+
+- Precios visibles, ordenados de menor a mayor: Básico $69; Premium $75; Premium + nitrógeno total $79; Premium + textura $89; Platinum $99.
+- Cada botón de WhatsApp incluye el paquete y su precio. Todos incluyen interpretación y orientación técnica.
+- Texto breve desde el plan Básico hasta Platinum, con decisiones para mantenimiento o rehabilitación del suelo.
+- Se retiran las dos menciones comerciales a visitas de campo en Acompañamiento. Se mantienen el contenido y las imágenes del resto del sitio.

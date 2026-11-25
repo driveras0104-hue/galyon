@@ -51,3 +51,9 @@
 /* GALYON SOILV2: fotografia refinada v20261103 */
 #analisis.soilv2 .soilv2-card-photo{height:120px;object-fit:cover}
 @media(max-width:780px){#analisis.soilv2 .soilv2-card-photo{height:105px}}
+
+/* Precios de los cinco paquetes, visibles junto a su alcance. */
+#analisis.soilv2 .soilv2-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;margin:0;color:#123d2b}
+#analisis.soilv2 .soilv2-price strong{font-size:2rem;font-weight:800;line-height:1.1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#analisis.soilv2 .soilv2-price span{font-size:.875rem;color:#526857}
+#analisis.soilv2 .soilv2-button{font-size:.875rem}
